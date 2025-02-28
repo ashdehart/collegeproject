@@ -1,0 +1,373 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/Minecraftia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Minecraftia', Arial, sans-serif;
+    margin: 0;
+    background: url('../img/backgroundimg.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #333;
+}
+
+/* Navigation Bar */
+.main-nav {
+    background: rgba(33,40,33,0.2); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.left-links li {
+    margin-right: 20px;
+}
+
+.right-links li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #F4F0EB;
+    text-decoration: none;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover {
+    background: rgba(255,255,255,0.3);
+    color: #ffffff;
+}
+
+/* Page container to center content */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Glass box styling for main */
+main {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* On the create account page, remove the box from main so only .form-container shows */
+.create-account-page {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+.form-container {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    padding: 50px;
+    width: 500px;
+    border-radius: 10px;
+    /* Remove the following line */
+    /* text-align: left; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers child elements horizontally */
+    text-align: center;  /* Centers text within child elements */
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Optional: Adjust spacing as needed */
+    /* Remove any width constraints */
+    /* Remove width: 100%; if present */
+    /* Optionally, add margin auto to ensure centering */
+    margin: 0 auto 20px auto;
+}
+
+
+
+/* Re-align form groups if needed */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%; /* Ensures full width so label/input arrangement remains correct */
+    text-align: left; /* This ensures labels and inputs remain left-aligned visually */
+}
+
+.form-group label {
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Center buttons and put them side by side */
+.form-actions {
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 20px;
+}
+
+/* Apply Minecraftia font and increase size for inputs, buttons, selects, textareas */
+input, button, select, textarea {
+    font-family: 'Minecraftia', Arial, sans-serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 10px; 
+}
+
+/* Buttons: Bigger, Minecraftia font, green color scheme */
+button {
+    background: #6A7B5C;
+    color: #F4F0EB;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+button:hover {
+    background: #8FA690;
+}
+
+/* Error Messages */
+.error {
+    color: #C57752;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Cards */
+.product-card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.product-card h2 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.product-card p.price {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.product-card a {
+    margin-top: auto;
+    font-size: 12px;
+    color: #C57752;
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+/* Cart Table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.cart-table th {
+    background: rgba(220,234,227,0.6);
+    text-align: left;
+}
+
+/* Informational Messages */
+.message {
+    color: #8FA690;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* Help Text */
+.help {
+    font-size: 0.9em;
+    color: #666;
+    text-shadow: none;
+}
+
+/* Links */
+a {
+    color: #C57752;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Headings and Typography */
+/* Very dark green for all headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: #0D220D;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* Product Detail Page */
+.product-detail {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.product-detail h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-detail .price {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-detail p.description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product-detail form {
+    margin-top: 20px;
+}
+
+.product-detail label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.product-detail input[type="number"] {
+    width: 60px;
+}
+
+.product-detail .message {
+    margin-top: 20px;
+}
